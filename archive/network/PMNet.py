@@ -214,3 +214,19 @@ class PMNet(nn.Module):
         xup00 = self.conv_up00(xup0)
         
         return xup00
+
+
+
+if __name__=="__main__":
+    m = PMNet(n_classes=1,
+    n_blocks=[3, 3, 27, 3],
+    atrous_rates=[6, 12, 18],
+    multi_grids=[1, 2, 4],
+    output_stride=16,)
+
+    B = 4
+    H = 256
+
+    input = torch.randn(B, 2, H, H)
+    output = m(input)
+    print(output.shape)
