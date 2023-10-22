@@ -6,7 +6,7 @@ This repo is the official implementation of ["A Scalable and Generalizable Pathl
 
 **PMNet** (Neural network tailored for Pathloss Map Prediction (PMP)) is described in [arxiv](https://arxiv.org/abs/2103.14030), which capably serves as a backbone for the PMP task. 
 
-PMNet achieves strong performance on the PMP task (`$10^{-2}$` level RMSE on val), surpassing previous models by a large margin.
+PMNet achieves strong performance on the PMP task ($10^{-2}$ level RMSE on val), surpassing previous models by a large margin.
 
 <!-- ![overview_PMNet](figure/overview_PMNet.png) -->
 <img src="figure/overview_PMNet.jpg" alt="overview_PMNet" width="800" style="float:center" />
