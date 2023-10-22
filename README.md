@@ -8,7 +8,8 @@ This repo is the official implementation of ["A Scalable and Generalizable Pathl
 
 PMNet achieves strong performance on the PMP task (`$10^{-2}$` level RMSE on val), surpassing previous models by a large margin.
 
-![teaser](figure/overview_pmnet.png)
+<!-- ![overview_PMNet](figure/overview_PMNet.png) -->
+<img src="figure/overview_PMNet.png" alt="overview_PMNet" width="200"/>
 
 
 <!-- ## Main Results on USC RT Dataset with Pretrained Models -->
@@ -16,10 +17,10 @@ PMNet achieves strong performance on the PMP task (`$10^{-2}$` level RMSE on val
 
 
 ## Ray-Tracing (RT)-based Channel Measurement Dataset (Updating...)
-![teaser](figure/map_USC.png)
-![teaser](figure/geometry_USC.png)
-![teaser](figure/map_UCLA.png)
-![teaser](figure/map_Boston.png)
+![map_USC](figure/map_USC.png)
+![bldmap_3D_USC](figure/geometry_USC.png)
+![map_UCLA](figure/map_UCLA.png)
+![map_Boston](figure/map_Boston.png)
 
 Datasets can be downloaded using following links <br/>
 [USC Dataset](https://drive.google.com/file/d/1uk7no4GwSCQ_sKI3WWnl67llzV1iLQ4l/view?usp=sharing) <br/>
