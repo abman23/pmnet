@@ -9,7 +9,7 @@ This repo is the official implementation of ["A Scalable and Generalizable Pathl
 PMNet achieves strong performance on the PMP task (`$10^{-2}$` level RMSE on val), surpassing previous models by a large margin.
 
 <!-- ![overview_PMNet](figure/overview_PMNet.png) -->
-<img src="figure/overview_PMNet.jpg" alt="overview_PMNet" width="600"/>
+<img src="figure/overview_PMNet.jpg" alt="overview_PMNet" width="800"/>
 
 
 
@@ -23,8 +23,8 @@ PMNet achieves strong performance on the PMP task (`$10^{-2}$` level RMSE on val
 ![bldmap_3D_USC](figure/geometry_USC.png)
 ![map_UCLA](figure/map_UCLA.png)
 ![map_Boston](figure/map_Boston.png) -->
-<img src="figure/overview_PMNet.png" alt="map_USC" width="250"/><img src="figure/geometry_USC.png" alt="bldmap_3D_USC" width="250"/> <br/>
-<img src="figure/map_UCLA.png" alt="map_UCLA" width="250"/><img src="figure/map_Boston.png" alt="map_Boston" width="250"/>
+<img src="figure/map_USC.png" alt="map_USC" width="300"/> <img src="figure/geometry_USC.png" alt="bldmap_3D_USC" width="300"/> <br/>
+<img src="figure/map_UCLA.png" alt="map_UCLA" width="300"/> <img src="figure/map_Boston.png" alt="map_Boston" width="300"/>
 
 
 Datasets can be downloaded using following links <br/>
