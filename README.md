@@ -1,6 +1,6 @@
 # A Scalable and Generalizable Pathloss Map Prediction
 
-This repo is the official implementation of ["A Scalable and Generalizable Pathloss Map Prediction"](https://arxiv.org/abs/2211.10527.pdf) as well as the follow-ups.
+This repo is the official implementation of ["A Scalable and Generalizable Pathloss Map Prediction"](https://arxiv.org/abs/2312.03950) as well as the follow-ups.
 
 ## Introduction
 
