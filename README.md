@@ -41,12 +41,31 @@ PMNet achieves strong performance on the PMP task ($10^{-2}$ level RMSE on val),
 
 ### How to use
 
-To evaluate above models, refer to the following commands.
+#### Evaluation
+
+To evaluate above models, refer to the following commands. Or, you can run eval.sh
 
 ```bash
-python [train_eval_file] 'eval' [dataset_directory] [model_to_eval]
-# e.g. python train_Boston_pmnet_V1_TL_1.py 'eval' '/Boston/' '/model_0.00010.pt'
+python eval.py \
+    --data_root [dataset-directory] \
+    --network [network-type] \ # pmnet_v1 or pmnet_v3
+    --model_to_eval [model-to-eval] \
+    --config [config-class-name]
+# e.g.,
+# python eval.py \
+#    --data_root '/USC/' \
+#    --network 'pmnet_v3' \
+#    --model_to_eval 'config_USC_pmnetV3_V2_epoch30/16_0.0001_0.5_10/model_0.00012.pt' \
+#    --config 'config_USC_pmnetV3_V2'
+```
 
+#### Train
+
+To train PMNet, please refer to train.sh
+
+```bash
+python train.py -d [dataset-root] -n [network-type] -c [config-class-name]
+# e.g., python train.py -d '/USC/' -n 'pmnet_v3' -c 'config_USC_pmnetV3_V2'
 ```
 
 ## Citation
@@ -60,5 +79,9 @@ year={2023},
 month={December},
 booktitle={Proceedings of IEEE Global Communicaions Conference (GLOBECOM)},
 }
+
+```
+
+```
 
 ```
