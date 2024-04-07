@@ -32,10 +32,10 @@ PMNet achieves strong performance on the PMP task ($10^{-2}$ level RMSE on val),
 
 | #   | Feature Size | Data-Augmentation | Fine-Tuning    | RMSE     | Download Link                                                                                     |
 | --- | ------------ | ----------------- | -------------- | -------- | ------------------------------------------------------------------------------------------------- |
-| 1   | 16/H X 16/W  | 4-way flips       | -              | 0.012599 | [Download](https://drive.google.com/file/d/1xxQ8TpS1UdGfh1ELSTAkrlPT5uKIYJei/view?usp=sharing)    |
-| 2   | 8/H X 8/W    | 4-way flips       | -              | 0.010570 | [Download](https://drive.google.com/file/d/1SQUdgtFJGRcilAkfDsOsomTzODjjpDsE/view?usp=sharing)    |
-| 3   | 16/H X 16/W  | -                 | UCLA Dataset   | 0.031449 | [Download](https://drive.google.com/file/d/1LEtEt7XCMFt7wvChS56XeFi8ySlIxLIJ/view?usp=sharing)    |
-| 4   | 16/H X 16/W  | -                 | Boston Dataset | 0.009875 | [Download](https://drive.google.com/file/d/1pwB5C8jHAsu0EQaiU2cJDRMBw4ctpOWI/view?usp=drive_link) |
+| 1   | 16/H X 16/W  | 4-way flips       | -              | 0.012599 | [Download](https://drive.google.com/file/d/1r1k9_PgqJEitY1E0VYZ62e2btuGwgnFk/view?usp=sharing)    |
+| 2   | 8/H X 8/W    | 4-way flips       | -              | 0.010570 | [Download](https://drive.google.com/file/d/1cAPSHiM-Q9JPnT1e-cP6u6ppXgCRKPTy/view?usp=sharing)    |
+| 3   | 16/H X 16/W  | -                 | UCLA Dataset   | 0.031449 | [Download](https://drive.google.com/file/d/1xshE4Y2Qa4k1ir1kzS2MAdDidJ6oVLGc/view?usp=sharing)    |
+| 4   | 16/H X 16/W  | -                 | Boston Dataset | 0.009875 | [Download](https://drive.google.com/file/d/17G-F19Bw05gyFcTbc9MYqrxYlzs0YP5K/view?usp=sharing) |
 
 - #3,4 checkpoints were fine-tuned using (1) which is a pre-trained model with USC Dataset.
 
