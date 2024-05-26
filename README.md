@@ -1,17 +1,30 @@
 # A Scalable and Generalizable Pathloss Map Prediction
 
-This repo is the official implementation of ["A Scalable and Generalizable Pathloss Map Prediction"](https://arxiv.org/abs/2312.03950) as well as the follow-ups.
+This repo is the implementation of our paper ["A Scalable and Generalizable Pathloss Map Prediction"](https://arxiv.org/abs/2312.03950), as well as the follow-ups.
 
-## Introduction
-
-**PMNet** (Neural network tailored for Pathloss Map Prediction (PMP)) is described in [arxiv](https://arxiv.org/abs/2103.14030), which capably serves as a backbone for the PMP task.
-
-PMNet achieves strong performance on the PMP task ($10^{-2}$ level RMSE on val), surpassing previous models by a large margin.
+## Highlights
+- **PMNet** (Neural network tailored for Pathloss Map Prediction (PMP)) is described in [arxiv](https://arxiv.org/abs/2103.14030), which serves as a backbone for the PMP task.
+- PMNet achieves strong performance on the PMP task ($10^{-2}$ level RMSE on val), surpassing other models by a large margin.
+- Proposed a method to predict pathloss in unseen network scenarios using transfer learning (TL) with three pre-trained models: VGG16 and two PMNet models trained with 3GPP and RT simulation results. Our PMNet model generalizes well, adapting to new scenarios 5.6× faster and using 4.5× less data than a baseline model without TL, while maintaining high accuracy (RMSE $10^{-2}$ level).
 
 <!-- ![overview_PMNet](figure/overview_PMNet.png) -->
 <img src="figure/overview_PMNet.jpg" alt="overview_PMNet" width="800" style="float:center" />
 
 <!-- ## Main Results on USC RT Dataset with Pretrained Models -->
+
+## Citation
+
+```
+
+@inproceedings{lee2023pmnet,
+title={PMNet: Robust Pathloss Map Prediction via Supervised Learning},
+author={Ju-Hyung Lee and Omer Gokalp Serbetci and Dheeraj Panneer Selvam and Andreas F. Molisch},
+year={2023},
+month={December},
+booktitle={Proceedings of IEEE Global Communicaions Conference (GLOBECOM)},
+}
+
+```
 
 ## Dataset: Ray-Tracing (RT)-based Channel Measurement (Updating...)
 
@@ -19,14 +32,19 @@ PMNet achieves strong performance on the PMP task ($10^{-2}$ level RMSE on val),
 ![bldmap_3D_USC](figure/geometry_USC.png)
 ![map_UCLA](figure/map_UCLA.png)
 ![map_Boston](figure/map_Boston.png) -->
-
 <img src="figure/map_USC.png" alt="map_USC" width="300"/> <img src="figure/geometry_USC.png" alt="bldmap_3D_USC" width="300"/> <br/>
 <img src="figure/map_UCLA.png" alt="map_UCLA" width="300"/> <img src="figure/map_Boston.png" alt="map_Boston" width="300"/>
 
-**Links for Dataset** <br/>
+| #   | Dataset (Map) | # of samples   | Download Link                                                                                     |
+| --- | ------------- | -------------- | ------------------------------------------------------------------------------------------------- |
+| 1   | USC           | -              | [Download](https://drive.google.com/file/d/1r1k9_PgqJEitY1E0VYZ62e2btuGwgnFk/view?usp=sharing)    |
+| 2   | UCLA          | -              | [Download](https://drive.google.com/file/d/1cAPSHiM-Q9JPnT1e-cP6u6ppXgCRKPTy/view?usp=sharing)    |
+| 3   | Boston        | -              | [Download](https://drive.google.com/file/d/1xshE4Y2Qa4k1ir1kzS2MAdDidJ6oVLGc/view?usp=sharing)    |
+
+<!-- **Download Link** <br/>
 [USC Dataset](https://drive.google.com/file/d/1uk7no4GwSCQ_sKI3WWnl67llzV1iLQ4l/view?usp=sharing) <br/>
 [Radiomapseer Reduced](https://drive.google.com/file/d/12eeypRCnTaCv1WyY9E-FT7ugvdsBTqDN/view?usp=sharing) <br/>
-[Radiomapseer Orginal](https://drive.google.com/file/d/1PTaPpLOKraVCRZU_Tzev4D5ZO32tpqMO/view?usp=sharing)
+[Radiomapseer Orginal](https://drive.google.com/file/d/1PTaPpLOKraVCRZU_Tzev4D5ZO32tpqMO/view?usp=sharing) -->
 
 ## Available checkpoints for PMNet
 
@@ -35,13 +53,20 @@ PMNet achieves strong performance on the PMP task ($10^{-2}$ level RMSE on val),
 | 1   | 16/H X 16/W  | 4-way flips       | -              | 0.012599 | [Download](https://drive.google.com/file/d/1r1k9_PgqJEitY1E0VYZ62e2btuGwgnFk/view?usp=sharing)    |
 | 2   | 8/H X 8/W    | 4-way flips       | -              | 0.010570 | [Download](https://drive.google.com/file/d/1cAPSHiM-Q9JPnT1e-cP6u6ppXgCRKPTy/view?usp=sharing)    |
 | 3   | 16/H X 16/W  | -                 | UCLA Dataset   | 0.031449 | [Download](https://drive.google.com/file/d/1xshE4Y2Qa4k1ir1kzS2MAdDidJ6oVLGc/view?usp=sharing)    |
-| 4   | 16/H X 16/W  | -                 | Boston Dataset | 0.009875 | [Download](https://drive.google.com/file/d/17G-F19Bw05gyFcTbc9MYqrxYlzs0YP5K/view?usp=sharing) |
+| 4   | 16/H X 16/W  | -                 | Boston Dataset | 0.009875 | [Download](https://drive.google.com/file/d/17G-F19Bw05gyFcTbc9MYqrxYlzs0YP5K/view?usp=sharing)    |
 
-- #3,4 checkpoints were fine-tuned using (1) which is a pre-trained model with USC Dataset.
+- #3,4 checkpoints were fine-tuned using (1), a pre-trained model with USC Dataset.
 
-### How to use
+## Train
 
-#### Evaluation
+To train PMNet, please refer to train.sh
+
+```bash
+python train.py -d [dataset-root] -n [network-type] -c [config-class-name]
+# e.g., python train.py -d '/USC/' -n 'pmnet_v3' -c 'config_USC_pmnetV3_V2'
+```
+
+## Evaluation
 
 To evaluate above models, refer to the following commands. Or, you can run eval.sh
 
@@ -59,29 +84,5 @@ python eval.py \
 #    --config 'config_USC_pmnetV3_V2'
 ```
 
-#### Train
 
-To train PMNet, please refer to train.sh
 
-```bash
-python train.py -d [dataset-root] -n [network-type] -c [config-class-name]
-# e.g., python train.py -d '/USC/' -n 'pmnet_v3' -c 'config_USC_pmnetV3_V2'
-```
-
-## Citation
-
-```
-
-@inproceedings{lee2023pmnet,
-title={PMNet: Robust Pathloss Map Prediction via Supervised Learning},
-author={Ju-Hyung Lee and Omer Gokalp Serbetci and Dheeraj Panneer Selvam and Andreas F. Molisch},
-year={2023},
-month={December},
-booktitle={Proceedings of IEEE Global Communicaions Conference (GLOBECOM)},
-}
-
-```
-
-```
-
-```
