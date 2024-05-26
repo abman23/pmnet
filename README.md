@@ -35,7 +35,7 @@ This repo is the implementation of our paper ["A Scalable and Generalizable Path
 }
 ```
 
-## Dataset: Ray-Tracing (RT)-based Channel Measurement (Updating...)
+## Dataset: Ray-Tracing (RT)-based Channel Measurement
 
 <!-- ![map_USC](figure/map_USC.png)
 ![bldmap_3D_USC](figure/geometry_USC.png)
