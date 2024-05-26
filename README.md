@@ -32,14 +32,18 @@ booktitle={Proceedings of IEEE Global Communicaions Conference (GLOBECOM)},
 ![bldmap_3D_USC](figure/geometry_USC.png)
 ![map_UCLA](figure/map_UCLA.png)
 ![map_Boston](figure/map_Boston.png) -->
+<center>
 <img src="figure/map_USC.png" alt="map_USC" width="300"/> <img src="figure/geometry_USC.png" alt="bldmap_3D_USC" width="300"/> <br/>
 <img src="figure/map_UCLA.png" alt="map_UCLA" width="300"/> <img src="figure/map_Boston.png" alt="map_Boston" width="300"/>
+</center>
 
+<center>
 | #   | Dataset (Map) | # of samples   | Download Link                                                                                     |
 | --- | ------------- | -------------- | ------------------------------------------------------------------------------------------------- |
 | 1   | USC           | -              | [Download](https://drive.google.com/file/d/1r1k9_PgqJEitY1E0VYZ62e2btuGwgnFk/view?usp=sharing)    |
 | 2   | UCLA          | -              | [Download](https://drive.google.com/file/d/1cAPSHiM-Q9JPnT1e-cP6u6ppXgCRKPTy/view?usp=sharing)    |
 | 3   | Boston        | -              | [Download](https://drive.google.com/file/d/1xshE4Y2Qa4k1ir1kzS2MAdDidJ6oVLGc/view?usp=sharing)    |
+</center>
 
 <!-- **Download Link** <br/>
 [USC Dataset](https://drive.google.com/file/d/1uk7no4GwSCQ_sKI3WWnl67llzV1iLQ4l/view?usp=sharing) <br/>
@@ -48,12 +52,14 @@ booktitle={Proceedings of IEEE Global Communicaions Conference (GLOBECOM)},
 
 ## Available checkpoints for PMNet
 
+<center>
 | #   | Feature Size | Data-Augmentation | Fine-Tuning    | RMSE     | Download Link                                                                                     |
 | --- | ------------ | ----------------- | -------------- | -------- | ------------------------------------------------------------------------------------------------- |
 | 1   | 16/H X 16/W  | 4-way flips       | -              | 0.012599 | [Download](https://drive.google.com/file/d/1r1k9_PgqJEitY1E0VYZ62e2btuGwgnFk/view?usp=sharing)    |
 | 2   | 8/H X 8/W    | 4-way flips       | -              | 0.010570 | [Download](https://drive.google.com/file/d/1cAPSHiM-Q9JPnT1e-cP6u6ppXgCRKPTy/view?usp=sharing)    |
 | 3   | 16/H X 16/W  | -                 | UCLA Dataset   | 0.031449 | [Download](https://drive.google.com/file/d/1xshE4Y2Qa4k1ir1kzS2MAdDidJ6oVLGc/view?usp=sharing)    |
 | 4   | 16/H X 16/W  | -                 | Boston Dataset | 0.009875 | [Download](https://drive.google.com/file/d/17G-F19Bw05gyFcTbc9MYqrxYlzs0YP5K/view?usp=sharing)    |
+</center>
 
 - #3,4 checkpoints were fine-tuned using (1), a pre-trained model with USC Dataset.
 
