@@ -69,8 +69,10 @@ This repo is the implementation of our paper ["A Scalable and Generalizable Path
 | 2   | 8/H X 8/W    | 4-way rotation    | -              | 0.010570 | [Download](https://drive.google.com/file/d/1cAPSHiM-Q9JPnT1e-cP6u6ppXgCRKPTy/view?usp=sharing)    |
 | 3   | 16/H X 16/W  | -                 | UCLA Dataset   | 0.031449 | [Download](https://drive.google.com/file/d/1xshE4Y2Qa4k1ir1kzS2MAdDidJ6oVLGc/view?usp=sharing)    |
 | 4   | 16/H X 16/W  | -                 | Boston Dataset | 0.009875 | [Download](https://drive.google.com/file/d/17G-F19Bw05gyFcTbc9MYqrxYlzs0YP5K/view?usp=sharing)    |
+| 5   | 8/H X 8/W    | 4-way rotation    | -              | 0.008944 | [Download](https://drive.google.com/file/d/1WuIMh5eBmMbUmVqLYB3bPi_mO1_G0wUv/view?usp=sharing)    |
 
 - #3,4 checkpoints were fine-tuned using (1), a pre-trained model with USC Dataset.
+- #5 was trained on USC-Upgraded dataset.
 
 ## Train
 
