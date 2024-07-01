@@ -52,6 +52,8 @@ This repo is the implementation of our paper ["A Scalable and Generalizable Path
 | 1   | USC           | 4754           | [Download](https://drive.google.com/file/d/1g2VseFCahxqF1_nVqWbp17wmle3aDAmq/view?usp=sharing)    |
 | 2   | UCLA          | 3776           | [Download](https://drive.google.com/file/d/14k5uIEAkWp-F1utbJeZqec79LRsBnmoi/view?usp=sharing)    |
 | 3   | Boston        | 3143           | [Download](https://drive.google.com/file/d/1utc73Z0jcfBVO6TscPNQrU7tohU02Tab/view?usp=sharing)    |
+| 4   | USC-Upgraded  | 8912           | [Download](https://drive.google.com/file/d/1GvD_Q2VgnrQVDOoNED4VIIJUKUaPwDMe/view?usp=sharing)    |
+| 5   | Rural         | 328            | [Download](https://drive.google.com/file/d/1jOEup6UiAl7pqlTomuaCnfZJUkX6ZbvD/view?usp=sharing)    |
 <!-- </div> -->
 
 <!-- **Download Link** <br/>
