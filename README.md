@@ -44,8 +44,8 @@ This repo is the implementation of our paper ["A Scalable and Generalizable Path
 <div align="center">
 <img src="figure/map_USC.png" alt="map_USC" width="300"/> <img src="figure/geometry_USC.png" alt="bldmap_3D_USC" width="300"/> <br/>
 <img src="figure/map_UCLA.png" alt="map_UCLA" width="300"/> <img src="figure/map_Boston.png" alt="map_Boston" width="300"/>
-<img src="figure/v6_city_map.png" alt="map_UCLA" width="300"/> <img src="figure/v6_tx_map.png" alt="map_Boston" width="300"/>
-<img src="figure/v6_power_map.png" alt="map_UCLA" width="300"/> 
+<img src="figure/v6_city_map.png" alt="v6_city_map" width="300"/> <img src="figure/v6_tx_map.png" alt="v6_tx_map" width="300"/>
+<img src="figure/v6_power_map.png" alt="v6_power_map" width="300"/> 
 </div>
 
 <!-- <div align="center"> -->
