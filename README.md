@@ -44,6 +44,8 @@ This repo is the implementation of our paper ["A Scalable and Generalizable Path
 <div align="center">
 <img src="figure/map_USC.png" alt="map_USC" width="300"/> <img src="figure/geometry_USC.png" alt="bldmap_3D_USC" width="300"/> <br/>
 <img src="figure/map_UCLA.png" alt="map_UCLA" width="300"/> <img src="figure/map_Boston.png" alt="map_Boston" width="300"/>
+<img src="figure/v6_city_map.png" alt="v6_city_map" width="300"/> <img src="figure/v6_tx_map.png" alt="v6_tx_map" width="300"/>
+<img src="figure/v6_power_map.png" alt="v6_power_map" width="300"/> 
 </div>
 
 <!-- <div align="center"> -->
@@ -52,6 +54,8 @@ This repo is the implementation of our paper ["A Scalable and Generalizable Path
 | 1   | USC           | 4754           | [Download](https://drive.google.com/file/d/1g2VseFCahxqF1_nVqWbp17wmle3aDAmq/view?usp=sharing)    |
 | 2   | UCLA          | 3776           | [Download](https://drive.google.com/file/d/14k5uIEAkWp-F1utbJeZqec79LRsBnmoi/view?usp=sharing)    |
 | 3   | Boston        | 3143           | [Download](https://drive.google.com/file/d/1utc73Z0jcfBVO6TscPNQrU7tohU02Tab/view?usp=sharing)    |
+| 4   | USC-Upgraded  | 8912           | [Download](https://drive.google.com/file/d/1GvD_Q2VgnrQVDOoNED4VIIJUKUaPwDMe/view?usp=sharing)    |
+| 5   | Rural         | 328            | [Download](https://drive.google.com/file/d/1jOEup6UiAl7pqlTomuaCnfZJUkX6ZbvD/view?usp=sharing)    |
 <!-- </div> -->
 
 <!-- **Download Link** <br/>
@@ -67,8 +71,10 @@ This repo is the implementation of our paper ["A Scalable and Generalizable Path
 | 2   | 8/H X 8/W    | 4-way rotation    | -              | 0.010570 | [Download](https://drive.google.com/file/d/1cAPSHiM-Q9JPnT1e-cP6u6ppXgCRKPTy/view?usp=sharing)    |
 | 3   | 16/H X 16/W  | -                 | UCLA Dataset   | 0.031449 | [Download](https://drive.google.com/file/d/1xshE4Y2Qa4k1ir1kzS2MAdDidJ6oVLGc/view?usp=sharing)    |
 | 4   | 16/H X 16/W  | -                 | Boston Dataset | 0.009875 | [Download](https://drive.google.com/file/d/17G-F19Bw05gyFcTbc9MYqrxYlzs0YP5K/view?usp=sharing)    |
+| 5   | 8/H X 8/W    | 4-way rotation    | -              | 0.008944 | [Download](https://drive.google.com/file/d/1WuIMh5eBmMbUmVqLYB3bPi_mO1_G0wUv/view?usp=sharing)    |
 
 - #3,4 checkpoints were fine-tuned using (1), a pre-trained model with USC Dataset.
+- #5 was trained on USC-Upgraded dataset.
 
 ## Train
 
