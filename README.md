@@ -24,7 +24,7 @@ This repo is the implementation of our paper ["A Scalable and Generalizable Path
     title={A Scalable and Generalizable Pathloss Map Prediction}, 
     author={Ju-Hyung Lee and Andreas F. Molisch},
     year={2024},
-    journal={arXiv preprint arXiv:2312.03950}
+    journal={IEEE Trans. Wireless Commun.}
 }
 ```
 
