@@ -1,6 +1,9 @@
 # A Scalable and Generalizable Pathloss Map Prediction
 
 This repo is the implementation of our paper ["A Scalable and Generalizable Pathloss Map Prediction"](https://arxiv.org/abs/2312.03950), as well as the follow-ups.
+<div align="center">
+<img src="figure/animation_pmnet.gif" alt="animation_pmnet" width="500" style="float:center" />
+</div>
 
 ## Highlights
 - **PMNet** (NN tailored for Pathloss Map Prediction (PMP)) is described in [arxiv](https://arxiv.org/abs/2103.14030), which serves as a backbone for the PMP task.
@@ -10,7 +13,7 @@ This repo is the implementation of our paper ["A Scalable and Generalizable Path
 
 <!-- ![overview_PMNet](figure/overview_PMNet.png) -->
 <div align="center">
-<img src="figure/overview_PMNet.jpg" alt="overview_PMNet" width="800" style="float:center" />
+<img src="figure/overview_pmnet.jpg" alt="overview_pmnet" width="800" style="float:center" />
 </div>
 <!-- ## Main Results on USC RT Dataset with Pretrained Models -->
 
