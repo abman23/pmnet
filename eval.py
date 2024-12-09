@@ -32,7 +32,7 @@ import matplotlib.pyplot as plt
 
 
 # RESULT_FOLDER = '/content/drive/MyDrive/Colab Notebooks/Joohan/PMNet_Extension_Result'
-RESULT_FOLDER = 'C:/Users/ABMAN23_ML/Desktop/Joohan/PMNet_Extension_Result'
+RESULT_FOLDER = 'results'
 TENSORBOARD_PREFIX = f'{RESULT_FOLDER}/tensorboard'
 
 
@@ -109,19 +109,19 @@ if __name__ == "__main__":
 
         data_train = None
         if 'usc' in args.config.lower():
-            from data_loader.loader_USC import PMnet_usc
-            num_of_maps = 19016
-            ddf = pd.DataFrame(np.arange(1,num_of_maps))
-            ddf.to_csv(csv_file, index=False)
-            data_train = PMnet_usc(csv_file = csv_file, dir_dataset=args.data_root)
+            from dataloader.loader_USC import PMnet_usc
+            # num_of_maps = 8912
+            # ddf = pd.DataFrame(np.arange(1,num_of_maps))
+            # ddf.to_csv(csv_file, index=False)
+            data_train = PMnet_usc(dir_dataset=args.data_root)
         elif 'ucla' in args.config.lower():
-            from data_loader.loader_UCLA import PMnet_ucla
+            from dataloader.loader_UCLA import PMnet_ucla
             num_of_maps = 3776
             ddf = pd.DataFrame(np.arange(1,num_of_maps))
             ddf.to_csv(csv_file, index=False)
             data_train = PMnet_ucla(csv_file = csv_file, dir_dataset=args.data_root)
         elif 'boston' in args.config.lower():
-            from data_loader.loader_Boston import PMnet_boston
+            from dataloader.loader_Boston import PMnet_boston
             num_of_maps = 3143
             ddf = pd.DataFrame(np.arange(1,num_of_maps))
             ddf.to_csv(csv_file, index=False)
@@ -141,7 +141,7 @@ if __name__ == "__main__":
 
     # Initialize PMNet and Load pre-trained weights if given.
     if 'pmnet_v1' == args.network:
-        from network.pmnet_v1 import PMNet as Model
+        from models.pmnet_v1 import PMNet as Model
         # init model 
         model = Model(
             n_blocks=[3, 3, 27, 3],
@@ -151,7 +151,7 @@ if __name__ == "__main__":
 
         model.cuda()
     elif 'pmnet_v3' == args.network:
-        from network.pmnet_v3 import PMNet as Model
+        from models.pmnet_v3 import PMNet as Model
         # init model 
         model = Model(
             n_blocks=[3, 3, 27, 3],
