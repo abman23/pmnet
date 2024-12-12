@@ -105,27 +105,18 @@ if __name__ == "__main__":
 
     # Load dataset
     if cfg.sampling == 'exclusive':
-        csv_file = os.path.join(args.data_root,'Data_coarse_train.csv')
+        # csv_file = os.path.join(args.data_root,'Data_coarse_train.csv')
 
         data_train = None
         if 'usc' in args.config.lower():
             from dataloader.loader_USC import PMnet_usc
-            # num_of_maps = 8912
-            # ddf = pd.DataFrame(np.arange(1,num_of_maps))
-            # ddf.to_csv(csv_file, index=False)
             data_train = PMnet_usc(dir_dataset=args.data_root)
         elif 'ucla' in args.config.lower():
             from dataloader.loader_UCLA import PMnet_ucla
-            num_of_maps = 3776
-            ddf = pd.DataFrame(np.arange(1,num_of_maps))
-            ddf.to_csv(csv_file, index=False)
-            data_train = PMnet_ucla(csv_file = csv_file, dir_dataset=args.data_root)
+            data_train = PMnet_ucla(dir_dataset=args.data_root)
         elif 'boston' in args.config.lower():
             from dataloader.loader_Boston import PMnet_boston
-            num_of_maps = 3143
-            ddf = pd.DataFrame(np.arange(1,num_of_maps))
-            ddf.to_csv(csv_file, index=False)
-            data_train = PMnet_boston(csv_file = csv_file, dir_dataset=args.data_root)
+            data_train = PMnet_boston(dir_dataset=args.data_root)
 
         dataset_size = len(data_train)
 
