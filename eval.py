@@ -47,6 +47,8 @@ def eval_model(model, test_loader, error="MSE", cfg=None, infer_img_path=''):
     # check dataset type
     pred_cnt=1 # start from 1
     for inputs, targets in tqdm(test_loader):
+        image_buildings, tx_map = inputs[:, 0, :, :], inputs[:, 1, :, :]
+        # BREAK
         inputs = inputs.cuda()
         targets = targets.cuda()
 
@@ -61,11 +63,14 @@ def eval_model(model, test_loader, error="MSE", cfg=None, infer_img_path=''):
 
             preds = model(inputs)
             preds = torch.clip(preds, 0, 1)
+            output = np.zeros((256, 256, 3), dtype=np.uint8)
 
             # inference image
             if infer_img_path!='':
                 for i in range(len(preds)):
-                    plt.imshow(cv2.cvtColor(preds[i][0].cpu().detach().numpy(), cv2.COLOR_BGR2RGB))
+                    output = np.stack([preds[i][0].cpu().detach().numpy()]*3, axis=2)
+                    output[:, :, 0][tx_map[i] == 1] = 1
+                    plt.imshow(cv2.cvtColor(output, cv2.COLOR_BGR2RGB))
 
                     img_name=os.path.join(infer_img_path,'inference_images',f'{pred_cnt}.png')
                     plt.savefig(img_name)
