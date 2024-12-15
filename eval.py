@@ -72,7 +72,7 @@ def eval_model(model, test_loader, error="MSE", cfg=None, infer_img_path=''):
                     output[:, :, 0][tx_map[i] == 1] = 1
                     plt.imshow(cv2.cvtColor(output, cv2.COLOR_BGR2RGB))
 
-                    img_name=os.path.join(infer_img_path,'inference_images',f'{pred_cnt}.png')
+                    img_name=os.path.join(infer_img_path,f'{args.model_to_eval}_inference',f'{pred_cnt}.png')
                     plt.savefig(img_name)
                     pred_cnt+=1
                     if pred_cnt%100==0:
@@ -163,7 +163,7 @@ if __name__ == "__main__":
     model.to(device)
 
      # create inference images directory if not exist
-    os.makedirs(os.path.join(os.path.split(args.model_to_eval)[-2], 'inference_images'), exist_ok=True)
+    os.makedirs(os.path.join(os.path.split(args.model_to_eval)[-2], f'{args.model_to_eval}_inference'), exist_ok=True)
 
     result = eval_model(model, test_loader, error="RMSE", cfg=None, 
                         infer_img_path=os.path.split(args.model_to_eval)[-2])
