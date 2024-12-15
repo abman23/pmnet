@@ -23,7 +23,7 @@ class PMnet_ucla(Dataset):
         self.file_names = os.listdir(dir_dataset+ "Tx/")
 
     def __len__(self):
-        return len(self.ind_val)
+        return len(self.file_names)
     
     def __getitem__(self, idx):
 
