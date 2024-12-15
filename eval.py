@@ -1,11 +1,8 @@
 from __future__ import print_function, division
 import os
-import time
-#from tkinter import W
 import warnings
 warnings.filterwarnings("ignore")
 
-import pandas as pd
 import numpy as np
 
 # torch
@@ -20,11 +17,9 @@ torch.backends.cudnn.enabled
 
 from tqdm import tqdm
 from datetime import datetime
-import sys
 
 import argparse
 import importlib
-import json
 from utils import L1_loss, MSE, RMSE
 
 import cv2
@@ -167,7 +162,4 @@ if __name__ == "__main__":
 
     result = eval_model(model, test_loader, error="RMSE", cfg=None, 
                         infer_img_path=os.path.split(args.model_to_eval)[-2])
-    result_json_path = os.path.join(os.path.split(args.model_to_eval)[-2], 'result.json')
-    with open(result_json_path, 'w') as f:
-        json.dump(result, f, indent=4)
     print('Evaluation score(RMSE): ', result)

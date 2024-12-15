@@ -34,7 +34,7 @@ import cv2
 import matplotlib.pyplot as plt
 
 
-RESULT_FOLDER = 'results'
+RESULT_FOLDER = 'training_results'
 TENSORBOARD_PREFIX = f'{RESULT_FOLDER}/tensorboard'
 
 
