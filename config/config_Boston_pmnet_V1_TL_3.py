@@ -11,7 +11,7 @@ class config_Boston_pmnet_V1_TL_3:
         self.validation_ratio = 0.1
         self.test_ratio = 0.1
 
-        self.pre_trained_model = '/content/drive/MyDrive/Colab Notebooks/Joohan/PMNet_Extension/checkpoints/USC_pmnet_V1_model_0.00016.pt'
+        self.pre_trained_model = 'checkpoints/USC_pmnet_V1_model_0.00016.pt'
 
         self.dataset_settings()
         self.optim_settings()
