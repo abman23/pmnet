@@ -21,9 +21,11 @@ from datetime import datetime
 import argparse
 import importlib
 from utils import L1_loss, MSE, RMSE
+from dataloader.data_loader import data_loader
 
 import cv2
 import matplotlib.pyplot as plt
+
 
 
 # RESULT_FOLDER = '/content/drive/MyDrive/Colab Notebooks/Joohan/PMNet_Extension_Result'
@@ -108,12 +110,7 @@ if __name__ == "__main__":
         # csv_file = os.path.join(args.data_root,'Data_coarse_train.csv')
 
         data_train = None
-        if 'pmnet_v3' == args.network:
-            from dataloader.v3_loader import PMnet_v3
-            data_train = PMnet_v3(dir_dataset=args.data_root)
-        elif 'pmnet_v1' == args.network:
-            from dataloader.v1_loader import PMnet_v1
-            data_train = PMnet_v1(dir_dataset=args.data_root)
+        data_train = data_loader(dir_dataset=args.data_root)
 
         dataset_size = len(data_train)
 
