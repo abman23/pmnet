@@ -10,7 +10,7 @@ from torchvision import transforms, utils, datasets, models
 import warnings
 warnings.filterwarnings("ignore")
 
-class PMnet_v1(Dataset):
+class data_loader(Dataset):
     def __init__(self, 
                 #  csv_file,
                  dir_dataset="data/",               
