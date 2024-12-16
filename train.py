@@ -166,15 +166,12 @@ if __name__ == "__main__":
         # csv_file = os.path.join(args.data_root,'Data_coarse_train.csv')
 
         data_train = None
-        if 'usc' in args.config.lower():
-            from dataloader.loader_USC import PMnet_usc
-            data_train = PMnet_usc(dir_dataset=args.data_root)
-        elif 'ucla' in args.config.lower():
-            from dataloader.loader_UCLA import PMnet_ucla
-            data_train = PMnet_ucla(dir_dataset=args.data_root)
-        elif 'boston' in args.config.lower():
-            from dataloader.loader_Boston import PMnet_boston
-            data_train = PMnet_boston(dir_dataset=args.data_root)
+        if 'pmnet_v3' == args.network:
+            from dataloader.v3_loader import PMnet_v3
+            data_train = PMnet_v3(dir_dataset=args.data_root)
+        elif 'pmnet_v1' == args.network:
+            from dataloader.v1_loader import PMnet_v1
+            data_train = PMnet_v1(dir_dataset=args.data_root)
 
         dataset_size = len(data_train)
 

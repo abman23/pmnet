@@ -1,20 +1,19 @@
+
 from __future__ import print_function, division
 import os
 import torch
-import pandas as pd
 from skimage import io, transform
 import numpy as np
-import matplotlib.pyplot as plt
-from torch.utils.data import Dataset, DataLoader
-from torchvision import transforms, utils, datasets, models
+from torch.utils.data import Dataset
+from torchvision import transforms
 import warnings
 warnings.filterwarnings("ignore")
 
 
-class PMnet_boston(Dataset):
+class PMnet_v3(Dataset):
     def __init__(self, 
                 #  csv_file,
-                 dir_dataset="Boston/",               
+                 dir_dataset="USC/",               
                  transform= transforms.ToTensor()):
         
         # self.ind_val = pd.read_csv(csv_file)
@@ -28,7 +27,7 @@ class PMnet_boston(Dataset):
     def __getitem__(self, idx):
 
         #Load city map
-        self.dir_buildings = self.dir_dataset+ "map/"
+        self.dir_buildings = self.dir_dataset+ "map_complimented/"
         img_name_buildings = os.path.join(self.dir_buildings, self.file_names[idx])
         image_buildings = np.asarray(io.imread(img_name_buildings))   
         
@@ -39,7 +38,7 @@ class PMnet_boston(Dataset):
 
         # #Load Rx (reciever): (not used in our training)
         # self.dir_Rx = self.dir_dataset+ "Rx/" 
-        # img_name_Rx = os.path.join(self.dir_Rx, str((self.ind_val.iloc[idx, 0]))) + ".png"
+        # img_name_Rx = os.path.join(self.dir_Rx, self.file_names[idx])
         # image_Rx = np.asarray(io.imread(img_name_Rx))
 
         #Load Power:
